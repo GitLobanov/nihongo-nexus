@@ -6,7 +6,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("/img/background/back_login.png");
+    background-image: url("/img/background/back_login.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +31,12 @@ body {
 h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    font-family: 'Akris', sans-serif;
+    text-shadow:
+            2px 1px 13px #007feb,
+            -20px 8px 0px #1b4e7e,
+            20px 16px 0px #183f6c,
+            20px -17px 0px #628EBA;
 }
 
 .input-group {
@@ -34,10 +45,19 @@ h1 {
 }
 
 label {
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 1.2rem;
+    color: #e5eaff;
     display: block;
     margin-bottom: 0.5rem;
+    font-family: 'Akris';
+}
+
+.f {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Akris', sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 1px 13px #007feb, -20px 8px 0px #1b4e7e, 20px 16px 0px #183f6c, 20px -17px 0px #628EBA;
 }
 
 input {
@@ -81,3 +101,49 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.login-window {
+    background: rgba(20, 29, 43, 0.8); /* Полупрозрачный темный фон */
+    border: 1px solid rgba(116, 183, 210, 0.3); /* Полупрозрачная неоновая рамка */
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    margin: 100px auto;
+    box-shadow: 0 0 15px 5px rgba(116, 183, 210, 0.2); /* Неоновая тень */
+}
+
+.login-window input[type="text"],
+.login-window input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(57, 91, 145, 0.5); /* Полупрозрачные текстовые поля */
+    border: none;
+    border-bottom: 2px solid #74B7D2;
+    color: #BAADC1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-window button {
+    width: 100%;
+    padding: 10px;
+    background-color: #497BA4; /* Кнопка с контрастным цветом */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-window button:hover {
+    background-color: #74B7D2; /* Светлый оттенок при наведении */
+    box-shadow: 0 0 10px rgba(116, 183, 210, 0.8); /* Неоновая тень */
+}
+
+.login-window h2 {
+    color: #BAADC1;
+    text-align: center;
+}
+

@@ -1,0 +1,14 @@
+${AnsiColor.BRIGHT_GREEN}          _             _     _      _              _            _           _
+${AnsiColor.BRIGHT_GREEN}         /\ \     _    /\ \ /_/\    /\ \           /\ \         /\ \        / /\
+${AnsiColor.BRIGHT_GREEN}        /  \ \   /\_\ /  \ \\ \ \   \ \_\         /  \ \       /  \ \      / /  \
+${AnsiColor.BRIGHT_GREEN}       / /\ \ \_/ / // /\ \ \\ \ \__/ / /        / /\ \ \     / /\ \ \    / / /\ \
+${AnsiColor.BRIGHT_GREEN}      / / /\ \___/ // / /\ \_\\ \__ \/_/        / / /\ \ \   / / /\ \_\  / / /\ \ \
+${AnsiColor.BRIGHT_GREEN}     / / /  \/____// /_/_ \/_/ \/_/\__/\       / / /  \ \_\ / / /_/ / / / / /  \ \ \
+${AnsiColor.BRIGHT_GREEN}    / / /    / / // /____/\     _/\/__\ \     / / /   / / // / /__\/ / / / /___/ /\ \
+${AnsiColor.BRIGHT_GREEN}   / / /    / / // /\____\/    / _/_/\ \ \   / / /   / / // / /_____/ / / /_____/ /\ \
+${AnsiColor.BRIGHT_GREEN}  / / /    / / // / /______   / / /   \ \ \ / / /___/ / // / /\ \ \  / /_________/\ \ \
+${AnsiColor.BRIGHT_YELLOW}/ / /    / / // / /_______\ / / /    /_/ // / /____\/ // / /  \ \ \/ / /_       __\ \_\
+${AnsiColor.BRIGHT_YELLOW}\/_/     \/_/ \/__________/ \/_/     \_\/ \/_________/ \/_/    \_\/\_\___\     /____/_/
+
+${AnsiColor.BRIGHT_CYAN}Application: ${AnsiColor.BRIGHT_YELLOW}Nihongo Nexus
+${AnsiColor.BRIGHT_CYAN}Version: ${AnsiColor.BRIGHT_YELLOW}0.0.1
