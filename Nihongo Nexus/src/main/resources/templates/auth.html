@@ -8,20 +8,34 @@
     <link rel="stylesheet" href=/css/font.css>
 </head>
 <body>
-<div class="auth-container login-window">
-    <label class="f1">Nihongo Nexus</label>
-    <form action="/login" method="POST" class="">
-        <div class="input-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="auth-btn">Login</button>
-        <p>Don't have an account? <a href="#">Sign up</a></p>
-    </form>
+
+<div class="login-page">
+    <div class="logo-comp">
+        <label class="f2">Nexora</label>
+    </div>
+
+    <div class="auth-container login-window">
+        <label class="f1">Nihongo Nexus</label>
+
+        <form action="/login" method="POST" class="">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="auth-btn">Login</button>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+    </div>
+
+    <div class="about-project">
+        <label class="f5">Образовательный проект по изучению японского языка</label>
+        <label class="f5">v 0.0.1</label>
+    </div>
 </div>
+
 </body>
 </html>

@@ -63,6 +63,20 @@ label {
     color: #ffffff;
 }
 
+.f4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Akris', sans-serif;
+    color: #ffffff;
+}
+
+.f5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Akris', sans-serif;
+    color: #ffffff;
+}
+
 input {
     width: 100%;
     padding: 0.8rem;
@@ -110,10 +124,28 @@ a:hover {
     border: 1px solid rgb(134 198 211 / 32%);
     max-width: 500px;
     max-height: 700px;
-    margin: 100px auto;
+    margin: 10px auto;
     box-shadow: 1px 20px 20px 3px rgb(2 57 79 / 77%);
     padding: 2rem;
     text-align: center;
+    transition: 1s;
+}
+
+.login-window:hover {
+    border: 1px solid rgb(134 198 211 / 56%);
+    background: rgb(24 41 61 / 54%);
+}
+
+@keyframes borderGlow {
+    0% {
+        top: -100%;
+    }
+    50% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
 }
 
 .login-window input[type="text"],
@@ -148,4 +180,14 @@ a:hover {
     color: #BAADC1;
     text-align: center;
 }
+
+.login-page {
+    text-align: center;
+}
+
+
+
+
+
+
 
