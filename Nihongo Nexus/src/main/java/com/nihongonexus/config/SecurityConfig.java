@@ -30,7 +30,7 @@ public class SecurityConfig {
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
                                 .successHandler((request, response, authentication) -> {
-                                    response.sendRedirect("/success");
+                                    response.sendRedirect("/profile");
                                 })
                                 .failureForwardUrl("/fail")
                                 .failureHandler((request, response, exception) -> {

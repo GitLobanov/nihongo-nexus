@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication | Nihongo Nexus</title>
-    <link rel="stylesheet" href=/css/main-styles.css>
+    <link rel="stylesheet" href=/css/main.css>
     <link rel="stylesheet" href=/css/font.css>
+    <link rel="stylesheet" href=/css/pages/login.sign.css>
+    <link rel="stylesheet" href=/css/buttons.css>
+    <link rel="stylesheet" href=/css/forms.css>
 </head>
 <body>
 
 <div class="login-page">
     <div class="logo-comp">
-        <label class="f2">Nexora</label>
+        <label class="f1">Nexora</label>
     </div>
 
     <div class="auth-container login-window">
-        <label class="f1">Nihongo Nexus</label>
+        <label class="logo">Nihongo Nexus</label>
 
         <form action="/login" method="POST" class="">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required value="user">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required value="1">
             </div>
             <button type="submit" class="auth-btn">Login</button>
             <p>Don't have an account? <a href="#">Sign up</a></p>

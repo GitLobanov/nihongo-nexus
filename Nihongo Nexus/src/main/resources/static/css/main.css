@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Psy', sans-serif;
+    background-image: url("/img/background/back_login_v0.0.1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Akris', sans-serif;
+    text-shadow:
+            2px 1px 13px #007feb,
+            -20px 8px 0px #1b4e7e,
+            20px 16px 0px #183f6c,
+            20px -17px 0px #628EBA;
+}
+
+
+p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
