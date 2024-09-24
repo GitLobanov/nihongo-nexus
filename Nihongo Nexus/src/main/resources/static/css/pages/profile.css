@@ -1,0 +1,108 @@
+/* Основной контейнер профиля */
+.profile-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.left-main-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.left-panel {
+    width: 20%;
+    padding: 20px;
+}
+
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Центральная часть с аватаром */
+.center-panel {
+    /*width: 30%;*/
+    text-align: center;
+}
+
+.avatar {
+    width: 20vw;
+    /*height: 200px;*/
+}
+
+/* Правая панель достижений */
+.right-panel {
+    width: 20%;
+    padding: 20px;
+}
+
+.right-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-panel li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Нижняя панель с текущей планетой */
+.bottom-panel {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    clip-path: polygon(50% 1%, 100% 0, 100% 73%, 75% 81%, 50% 100%, 25% 80%, 0% 75%, 0 0);
+    border: 2px solid rgb(54 138 170);
+    padding: 10px;
+}
+
+.planet-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.planet-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.planet-stats {
+    font-size: 18px;
+    /*color: #213855;*/
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-panel, .right-panel, .center-panel {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .planet-info {
+        flex-direction: column;
+    }
+
+    .planet-img {
+        margin-bottom: 10px;
+    }
+}

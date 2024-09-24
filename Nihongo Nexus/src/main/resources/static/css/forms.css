@@ -1,0 +1,25 @@
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #e5eaff;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Akris';
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-: 4px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}

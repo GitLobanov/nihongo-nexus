@@ -11,21 +11,23 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.parent_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .logo {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-family: 'Akris', sans-serif;
-    text-shadow:
-            2px 1px 13px #007feb,
-            -20px 8px 0px #1b4e7e,
-            20px 16px 0px #183f6c,
-            20px -17px 0px #628EBA;
+    text-shadow: 2px 1px 13px #007feb,
+    -20px 8px 0px #1b4e7e,
+    20px 16px 0px #183f6c,
+    20px -17px 0px #628EBA;
 }
 
 
@@ -42,6 +44,12 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.panel {
+    background-color: #0d1d36a1;
+    color: #d6e2e7f0;
+}
+
 
 
 

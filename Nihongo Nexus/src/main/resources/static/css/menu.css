@@ -1,0 +1,108 @@
+/* Гамбургер-кнопка для открытия меню */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #ffffffa3;
+    background-color: #36779375;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Скрытая кнопка */
+.hidden {
+    display: none;
+}
+
+/* Боковое меню */
+.menu {
+    width: 250px;
+    background-color: #2b74aa40;
+    border: 1px solid #9fc4da2e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s cubic-bezier(1, 0.11, 0.1, 0.76);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 999;
+}
+
+/* Кнопка закрытия меню */
+.close-menu {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ffffffa3;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Элементы меню */
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #0c1b34b3;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #1b7192c7;
+}
+
+/* Замок для заблокированной кнопки */
+.menu a.locked {
+    background-color: #49506f8c;
+    cursor: not-allowed;
+}
+
+/* Иконка замка поверх кнопки */
+.menu a.locked::before {
+    content: '🔒'; /* Используем символ замка */
+    position: absolute;
+    top: 10px; /* Расположение замка над кнопкой */
+    right: 10px; /* Можно регулировать позицию */
+    font-size: 18px;
+    color: #BAADC1; /* Цвет замка */
+}
+
+/* Меню в активном состоянии (открыто) */
+.menu.active {
+    left: 0;
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu {
+        width: 200px;
+    }
+
+    .profile-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* На мобильных скрываем меню по умолчанию */
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}

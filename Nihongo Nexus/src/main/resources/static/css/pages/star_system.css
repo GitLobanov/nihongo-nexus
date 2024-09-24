@@ -1,0 +1,87 @@
+.star_system_container {
+    height: 100%;
+    flex-direction: column;
+}
+
+/* Контейнер планет и линии между ними */
+.planet-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+    background-color: #0913213b;
+    height: 70vh;
+}
+
+.planet-container:hover {
+    background-color: #0d31637a;
+}
+
+.planet {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.planet::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.planet::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Линии между планетами */
+.line {
+    width: 10px;
+    height: 100%;
+    background-color: #3C6293;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Открытые и заблокированные планеты */
+.planet.open {
+    /* Дополнительные стили для открытой планеты, если нужно */
+}
+
+.planet.locked {
+    /* Дополнительные стили для заблокированной планеты, если нужно */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .star-system {
+        flex-direction: column;
+    }
+
+    .planet-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line {
+        height: 30px;
+    }
+}
