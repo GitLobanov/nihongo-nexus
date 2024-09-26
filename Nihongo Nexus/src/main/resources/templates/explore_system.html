@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,35 +11,34 @@
 </head>
 <body>
 
-<!-- Гамбургер-меню для мобильных устройств -->
-<div class="menu-toggle open-menu" onclick="toggleMenu()">☰</div>
-
-<!-- Боковое меню -->
-<nav class="menu">
-    <button class="close-menu" onclick="toggleMenu()">✖</button>
-    <a class="locked" href="#home">События</a>
-    <a class="locked" href="#profile">Сезон</a>
-    <a class="locked" href="#settings">Настройки</a>
-    <a href="/logout">Выход</a>
-</nav>
+<div th:replace="fragments/menu :: menu"></div>
 
 <div class="parent_container">
     <div class="star_system_container">
         <div class="planet-container">
-            <img src="/img/planet/planet-jungle-hand.png" alt="Planet 1" class="planet open">
+            <img src="/img/planet/planet-jungle-hand.png" alt="Planet 1" class="planet">
             <div class="">
                 <h1 class="f3">Planet GigaChad</h1>
-                <h1 class="f3">Исследовано: 7 локаций</h1><h1 class="f3">Разгадоно текстов: 13</h1></div>
+                <h1 class="f3">Исследовано: 7 локаций</h1><h1 class="f3">Разгадоно текстов: 13</h1>
+            </div>
             <div class="line"></div>
         </div>
 
-        <div class="planet-container">
-            <img src="planet-locked.png" alt="Planet 2" class="planet locked">
+        <div class="planet-container planet-locked">
+            <img src="/img/planet/planet-jungle-hand.png" alt="Planet 1" class="planet">
+            <div class="">
+                <h1 class="f3">Planet GigaChad</h1>
+                <h1 class="f3">Исследовано: 7 локаций</h1><h1 class="f3">Разгадоно текстов: 13</h1>
+            </div>
             <div class="line"></div>
         </div>
 
-        <div class="planet-container">
-            <img src="planet-locked.png" alt="Planet 3" class="planet locked">
+        <div class="planet-container planet-locked">
+            <img src="/img/planet/planet-jungle-hand.png" alt="Planet 1" class="planet">
+            <div class="">
+                <h1 class="f3">Planet GigaChad</h1>
+                <h1 class="f3">Исследовано: 7 локаций</h1><h1 class="f3">Разгадоно текстов: 13</h1>
+            </div>
             <div class="line"></div>
         </div>
     </div>
@@ -47,15 +46,6 @@
 </div>
 </div>
 
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        const openMenuButton = document.querySelector('.open-menu');
-        const closeMenuButton = document.querySelector('.close-menu');
-
-        menu.classList.toggle('active');
-        openMenuButton.classList.toggle('hidden');
-    }
-</script>
+<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>

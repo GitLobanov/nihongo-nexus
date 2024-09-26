@@ -10,11 +10,36 @@
     position: relative;
     margin: 20px;
     background-color: #0913213b;
-    height: 70vh;
+    height: auto; /* Высота будет зависеть от содержимого */
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.planet-container img {
+    max-width: 100%; /* Ограничение ширины изображения по ширине контейнера */
+    height: auto; /* Поддержка пропорций изображения */
+    display: block; /* Убирает возможные пробелы */
+    margin: 0 auto; /* Центрирует изображение */
 }
 
 .planet-container:hover {
-    background-color: #0d31637a;
+    /*background-color: #0d31637a;*/
+}
+
+.planet-locked::before {
+    content: "✖"; /* Unicode символ для "X" */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9 18 31 / 25%);
+    background-color: #bf1b4a3d;
+    z-index: 10;
 }
 
 .planet {
@@ -61,14 +86,9 @@
     transform: translateY(-50%);
 }
 
-/* Открытые и заблокированные планеты */
-.planet.open {
-    /* Дополнительные стили для открытой планеты, если нужно */
-}
 
-.planet.locked {
-    /* Дополнительные стили для заблокированной планеты, если нужно */
-}
+
+
 
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {

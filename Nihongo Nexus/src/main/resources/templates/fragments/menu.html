@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<nav th:fragment="menu">
+    <!-- Гамбургер-меню для мобильных устройств -->
+    <div class="menu-toggle open-menu" onclick="toggleMenu()">☰</div>
+
+    <!-- Боковое меню -->
+    <nav class="menu">
+        <button class="close-menu" onclick="toggleMenu()">✖</button>
+        <a class="locked" href="#home">События</a>
+        <a class="locked" href="#profile">Сезон</a>
+        <a class="" href="/galaxy">Галактика</a>
+        <a class="locked" href="#settings">Настройки</a>
+        <a href="/logout">Выход</a>
+    </nav>
+</nav>

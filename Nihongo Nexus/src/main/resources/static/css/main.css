@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*height: 100vh;*/
+    height: 100vh;
 }
 
 .logo {
@@ -48,6 +48,63 @@ a:hover {
 .panel {
     background-color: #0d1d36a1;
     color: #d6e2e7f0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.bg #text {
+    position: relative;
+    font-size: 120px;
+    color: #fff;
+    opacity: 0.6;
+}
+.bg .fog {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.bg .fog img {
+    position: absolute;
+    bottom: 0;
+    /* left: 50%; */
+    /* right: 50%; */
+    max-width: 100%;
+    animation: fog_effect calc(3s * var(--i)) ease-in infinite;
+    background-color: #3993b200;
+}
+@keyframes fog_effect {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25%,
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
 }
 
 

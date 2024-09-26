@@ -68,15 +68,7 @@
     </div>
 </div>
 
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        const openMenuButton = document.querySelector('.open-menu');
-        const closeMenuButton = document.querySelector('.close-menu');
+<footer th:replace="fragments/footer :: footer"></footer>
 
-        menu.classList.toggle('active');
-        openMenuButton.classList.toggle('hidden');
-    }
-</script>
 </body>
 </html>
