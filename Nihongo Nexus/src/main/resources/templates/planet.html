@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head :: head"></th:block>
+    <link rel="stylesheet" href="/css/pages/planet.css">
+</head>
+<body>
+
+<div th:replace="fragments/menu :: menu"></div>
+
+<div class="parent_container">
+
+    <div class="explore-container explore-planet">
+        <div class="main-explore-block">
+            <h1>Этап 1</h1>
+            <h1>Описание первого этапа</h1>
+        </div>
+
+        <div class="cmd-explore-block">
+            <button class="cmd-btn">СЛ</button>
+        </div>
+
+        <div class="progress-explore-block">
+            <h3 class="explore-plate">Уровень 13</h3>
+            <h3  class="explore-plate">Исследовано 7/21</h3>
+            <h3  class="explore-plate">Этапы</h3>
+            <div class="explore-stages-block">
+                <div class="explore-section-stages-block">
+                    <h4 class="explore-plate-mini">Раздел 1</h4>
+                    <div class="explore-stages-list">
+                        <button class="simple-btn">Этап 1</button>
+                        <button class="simple-btn">Этап 2</button>
+                        <button class="simple-btn">Этап 3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

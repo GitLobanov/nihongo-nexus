@@ -6,7 +6,15 @@
 
 body {
     font-family: 'Psy', sans-serif;
+    color: white;
     background-image: url("/img/background/back_login_v0.0.1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.background-img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,6 +115,14 @@ a:hover {
     }
 }
 
+.explore-container {
+    background-color: #0077b675;
+    height: 80%;
+    width: 80%;
+    border-left: 10px solid #023E8A;
+    padding: 10px;
+    display: grid;
+}
 
 
 

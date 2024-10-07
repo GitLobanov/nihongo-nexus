@@ -63,3 +63,41 @@
 .login-page {
     text-align: center;
 }
+
+input:valid:not(:placeholder-shown) {
+    background-image: url("/img/icon/check-good.png");
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #8e44ad;
+    background-image: url("/img/icon/check-bad.png");
+}
+
+input:valid:not(:placeholder-shown), input:invalid:not(:placeholder-shown) {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+}
+
+input:invalid:not(:placeholder-shown) + p {
+    color: red;
+}
+
+input:invalid ~ button {
+    cursor: not-allowed;
+}
+
+input[type="password"]:invalid:not(:placeholder-shown) + p {
+    color: #e04f5f;
+    visibility: visible;
+    position: unset;
+    font-size: larger;
+    background-color: #192c42a8;
+    padding: 2px;
+    text-align: center;
+}
+
+form p  {
+    visibility: hidden;
+    position: absolute;
+}

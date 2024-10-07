@@ -1,147 +1,40 @@
-.star-systems-carousel {
+.carousel-container {
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
-    background-color: #1b2a4075;
-    padding: 20px;
-    border: 1px solid #0f213169;
-}
-
-/* Враппер для звездных систем */
-.star-systems-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
+    justify-content: center;
 }
 
-/* Каждая звездная система */
+.carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    transition: transform 0.8s ease-in-out;
+    height: 80%;
+    width: 80%;
+    background: rgba(2, 62, 138, 0.51);
+}
+
 .star-system {
-    min-width: 200px;
-    height: 100%;
-    text-align: left;
-    background-color: #0b1d3bc2;
-    color: white;
-    position: relative;
-    box-sizing: inherit;
-    overflow: hidden;
-    margin: 4px;
-    border-right: 8px solid #378ccdb8;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% auto;
+}
+
+.system-zone {
+    border: 1px solid rgba(0, 0, 0, 0.42);
+    display: flex;
 }
 
 .system-description {
-    padding: 10px;
-    font-family: 'Akris', serif;
-    border-left: 5px solid #8f3063ad;
-    margin: 10px;
-    background-color: #f0f8ff0f;
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    background: rgba(36, 68, 98, 0.68);
 }
 
-.star-system img {
-    height: 90%;
-    /* width: 50%; */
-    display: block;
-    margin: 0 auto;
-}
 
-/* Заблокированные звездные системы (с замком) */
-.star-system[data-status="locked"] {
-    opacity: 0.5;
-    position: relative;
-}
-
-.star-system[data-status="locked"]::before {
-    content: "\1F512"; /* Unicode для замка */
-    font-size: 2em;
-    color: #BAADC1;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-/* Star in the center */
-.star {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.7);
-}
-
-/* Planet orbit paths */
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    border: 1px dashed rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-}
-
-/* Planet orbits */
-.orbit1 {
-    width: 120px;
-    height: 120px;
-}
-
-.orbit2 {
-    width: 180px;
-    height: 180px;
-}
-
-.orbit3 {
-    width: 240px;
-    height: 240px;
-}
-
-/* Planets */
-.planet {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.planet1 {
-    background-color: #3993b2;
-}
-
-.planet2 {
-    background-color: #e74c3c;
-}
-
-.planet3 {
-    background-color: #8e44ad;
-}
-
-/* Animation */
-@keyframes orbit {
-    from {
-        transform: rotate(0deg) translateX(60px) rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg) translateX(60px) rotate(-360deg);
-    }
-}
-
-.orbit1 .planet1 {
-    animation: orbit 10s linear infinite;
-}
-
-.orbit2 .planet2 {
-    animation: orbit 15s linear infinite;
-}
-
-.orbit3 .planet3 {
-    animation: orbit 20s linear infinite;
-}
-
-/* Стрелки навигации */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -155,10 +48,12 @@
 
 .prev-btn {
     left: 10px;
+    background-image: url("/img/icon/arrow_left.png");
 }
 
 .next-btn {
     right: 10px;
+    background-image: url("/img/icon/arrow_right.png");
 }
 
 @media (max-width: 768px) {
@@ -170,7 +65,5 @@
         padding: 5px;
     }
 }
-
-
 
 

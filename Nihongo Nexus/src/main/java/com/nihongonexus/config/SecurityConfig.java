@@ -47,7 +47,7 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withUsername("user")
-                .password(passwordEncoder().encode("1"))
+                .password(passwordEncoder().encode("123456"))
                 .roles("USER")
                 .build();
 

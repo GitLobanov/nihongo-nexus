@@ -1,0 +1,36 @@
+.explore-planet {
+    display: grid;
+    grid-template-columns: 80% auto 15%;
+    justify-items: start;
+}
+
+.progress-explore-block {
+    width: 100%;
+    background-color: #03045e66;
+    padding: 10px;
+    color: white;
+    overflow: auto;
+}
+
+.explore-plate {
+    background-color: #0096c77d;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.explore-stages-block {
+    overflow: scroll;
+    overflow-x: auto;
+    height: 70%;
+}
+
+
+.explore-plate-mini {
+    background-color: #10607bb0;
+    padding: 5px;
+}
+
+.explore-stages-list button {
+    border-top: 2px solid aliceblue;
+}
+

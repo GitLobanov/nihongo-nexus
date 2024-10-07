@@ -11,29 +11,39 @@
 
 <div class="parent_container">
 
-    <div class="star-systems-carousel">
-        <div class="star-systems-wrapper">
-            <div class="star-system" data-status="open">
-                <img src="/img/system/system_test.png" alt="Star System 1" class="star-image">
-                <div class="system-description">
-                    <h2>Star System 1</h2>
-                    <p>Description of Star System 1</p>
+    <div class="explore-container">
+        <div class="carousel-container">
+
+            <div class="carousel-track">
+
+                <div class="star-system">
+                    <div class="system-zone">
+                        <h1 class="f1"> ЗДЕСЬ СИСТЕМА </h1>
+                    </div>
+                    <div class="system-description">
+                        <div class="system-description-info">
+                            <h1 class="f1">Система БИ 2</h1>
+                            <h3 class="f3">Очень крутая система ранжировани предктов новых созвездий немысленного
+                                масштбаа потери безопсаности перед погибелью новых иероглифов при изучени татунхамоновских историй</h3>
+                        </div>
+                        <div class="system-description-state">
+                            <p class="f3">Стата 1</p>
+                            <p class="f3">Стата 2</p>
+                            <p class="f3">Стата 3</p>
+                        </div>
+                        <div class="system-description-cmd">
+                            <a href="explore">Отправиться</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="star-system" data-status="locked">
-                <img src="/img/system/system_test.png" alt="Star System 2" class="star-image">
-                <h2>Star System 2</h2>
-                <p>Description of Star System 2</p>
-            </div>
-            <div class="star-system" data-status="locked">
-                <img src="/img/system/system_test.png" alt="Star System 3" class="star-image">
-                <h2>Star System 2</h2>
-                <p>Description of Star System 2</p>
-            </div>
+
+            <button class="prev-btn background-img">&#10094;</button>
+            <button class="next-btn background-img">&#10095;</button>
         </div>
-        <button class="prev-btn" onclick="prevSystem()">&#10094;</button>
-        <button class="next-btn" onclick="nextSystem()">&#10095;</button>
     </div>
+
 
 </div>
 
@@ -41,41 +51,35 @@
 
 <script>
 
-    let currentIndex = 0;
+    const track = document.querySelector('.carousel-track');
+    const nextButton = document.querySelector('.next-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    let currentSlide = 0;
 
-    function showSystem(index) {
-        const wrapper = document.querySelector('.star-systems-wrapper');
-        const systems = document.querySelectorAll('.star-system');
-
-        if (index >= systems.length) {
-            currentIndex = systems.length - 1; // Блокируем переход за последнюю систему
-        } else if (index < 0) {
-            currentIndex = 0; // Блокируем переход за первую систему
+    nextButton.addEventListener('click', () => {
+        const totalSlides = document.querySelectorAll('.star-system').length;
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
         } else {
-            currentIndex = index;
+            currentSlide = 0; // возвращаемся к первому слайду
         }
+        updateCarousel();
+    });
 
-        // Передвигаем враппер звездных систем
-        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        // Проверяем, заблокирована ли система
-        if (systems[currentIndex].dataset.status === "locked") {
-            document.querySelector('.next-btn').disabled = true; // Блокируем кнопку "вперед"
+    prevButton.addEventListener('click', () => {
+        const totalSlides = document.querySelectorAll('.star-system').length;
+        if (currentSlide > 0) {
+            currentSlide--;
         } else {
-            document.querySelector('.next-btn').disabled = false; // Разблокируем кнопку
+            currentSlide = totalSlides - 1; // перемещаемся на последний слайд
         }
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
-    function nextSystem() {
-        showSystem(currentIndex + 1);
-    }
-
-    function prevSystem() {
-        showSystem(currentIndex - 1);
-    }
-
-    // Инициализация: показываем первую систему
-    showSystem(currentIndex);
 
 </script>
 
